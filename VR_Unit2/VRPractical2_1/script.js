@@ -73,20 +73,20 @@ function createHouse(x, y, z){
 
   let base = document.createElement("a-box");
   base.setAttribute("position", "0 0.5 0");
-  base.setAttribute("scale", "2 2 2")
-  base.setAttribute("color", "tan")
+  base.setAttribute("scale", "2 2 2");
+  base.setAttribute("color", "tan");
   house.append(base);
   
   let roof = document.createElement("a-cylinder");
   roof.setAttribute("segments-radial", "3");
-  roof.setAttribute("rotation", "270 0 0")
-  roof.setAttribute("position", "0 2.25 0")
-  roof.setAttribute("scale", "1.25 2 1.5")
-  roof.setAttribute("color", "black")
+  roof.setAttribute("rotation", "270 0 0");
+  roof.setAttribute("position", "0 2.25 0");
+  roof.setAttribute("scale", "1.25 2 1.5");
+  roof.setAttribute("color", "black");
   house.append(roof);
 
   house.setAttribute("position", {x:x, y:y, z:z});
-  scene.append(house)
+  scene.append(house);
 }
 
 function createTree(x, y, z){
