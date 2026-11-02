@@ -1,5 +1,5 @@
 let rnd = (l,u) => Math.floor(Math.random()*(u-l) + l);
-let scene;
+let scene, snowman, cloud;
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene"); //CSS Selector
@@ -9,6 +9,7 @@ window.addEventListener("DOMContentLoaded",function() {
     tree.scale(rnd(1,4));
   }
   snowman = new Snowman(-5,0);
+  cloud = new Cloud(0, 8, 0)
   //Challenge 3: Create a cloud at some high position. Don't forget to declare the variable up top.
 
   //Challenge 7: Create a snowflake at some high position. Don't forget to declare the variable up top.
@@ -18,6 +19,8 @@ window.addEventListener("DOMContentLoaded",function() {
 function loop(){
   snowman.spin();
   //Challenge 4: Make the cloud fly
+  cloud.fly();
+
   //Challenge 8: Make the snowflake fall
   window.requestAnimationFrame(loop);
 }
