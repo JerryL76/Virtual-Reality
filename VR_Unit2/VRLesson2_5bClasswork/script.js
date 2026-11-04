@@ -37,6 +37,9 @@ function loop(){
     snowman.spin();
   }
   //Challenge 2: Traverse your array of clouds and make each cloud fly
+  for(let cloud of clouds){
+    cloud.fly();
+  }
 
   //Challenge 4: Traverse your array of snowflakes and make each snowflake fall
   
