@@ -1,5 +1,5 @@
 let rnd = (l,u) => Math.floor(Math.random()*(u-l) + l);
-let scene, rockets = [], ufos = [];
+let scene, rockets = [], ufos = [], snowflakes = [];
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene"); 
@@ -20,6 +20,14 @@ window.addEventListener("DOMContentLoaded",function() {
     ufos.push(ufo);
   }
 
+  for(let i = 0; i < 100; i++){
+    let x = rnd(-50,50);
+    let y = rnd(50, 75);
+    let z = rnd(-50,50);
+    let snowflake = new Snowflake(x, y, z);
+    snowflakes.push(snowflake);
+  }
+
 
   loop();
 })
@@ -31,6 +39,10 @@ function loop(){
 
   for(let ufo of ufos){
     ufo.invade();
+  }
+
+  for(let snowflake of snowflakes){
+    snowflake.fall();
   }
   
   window.requestAnimationFrame( loop );
