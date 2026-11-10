@@ -53,13 +53,13 @@ class Rocket {
     nozzle.setAttribute("radius","0.3");
     this.obj.append(nozzle);
 
-    let Flame = document.createElement("a-cone");
-    Flame.setAttribute("color","orange");
-    Flame.setAttribute("position","0 -2 0");
-    Flame.setAttribute("height","1.5");
-    Flame.setAttribute("radius-top","0");
-    Flame.setAttribute("radius-bottom","0.28");
-    Flame.setAttribute("rotation","180 0 0");
+    let flame = document.createElement("a-cone");
+    flame.setAttribute("color","orange");
+    flame.setAttribute("position","0 -2 0");
+    flame.setAttribute("height","1.5");
+    flame.setAttribute("radius-top","0");
+    flame.setAttribute("radius-bottom","0.28");
+    flame.setAttribute("rotation","180 0 0");
     this.obj.append(Flame);
 
     this.obj.setAttribute("position",{x:x,y:y,z:z});
