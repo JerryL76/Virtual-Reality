@@ -21,7 +21,6 @@ class Rocket {
     body.setAttribute("radius","0.5");
     this.obj.append(body);
 
-
     let windowGlass = document.createElement("a-sphere");
     windowGlass.setAttribute("color","skyblue");
     windowGlass.setAttribute("position","0 0.3 0.42");
