@@ -59,7 +59,7 @@ class Rocket {
     flame.setAttribute("radius-top","0");
     flame.setAttribute("radius-bottom","0.28");
     flame.setAttribute("rotation","180 0 0");
-    this.obj.append(Flame);
+    this.obj.append(flame);
 
     this.obj.setAttribute("position",{x:x,y:y,z:z});
     scene.append(this.obj);
